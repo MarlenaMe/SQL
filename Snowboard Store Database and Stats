@@ -1,0 +1,37 @@
+--Create a snowboard store database
+
+CREATE TABLE Snowboards (ID INTEGER PRIMARY KEY, Brand TEXT, Model TEXT, NumberInStock INTEGER, Price INTEGER);
+
+INSERT INTO Snowboards VALUES (1, "Gnu", "Barrett", 4, 560.96);
+INSERT INTO Snowboards VALUES (2, "Korua", "Transition Finder", 7, 549.96);
+INSERT INTO Snowboards VALUES (3, "YES", "Greats UncInc", 6, 600.96);
+INSERT INTO Snowboards VALUES (4, "YES", "Rival", 3, 530.96);
+INSERT INTO Snowboards VALUES (5, "Academy", "Masters Series", 2, 599.96);
+INSERT INTO Snowboards VALUES (6, "Burton", "Feelgood Camber", 5, 610.96);
+INSERT INTO Snowboards VALUES (7, "K2", "Antidote", 7, 600.96);
+INSERT INTO Snowboards VALUES (8, "Jones", "Storm Wolf", 7, 650.96);
+INSERT INTO Snowboards VALUES (9, "Burton", "3D Deep Daze", 2, 660.96);
+INSERT INTO Snowboards VALUES (10, "Venture", "Euphoria", 3, 700.96);
+INSERT INTO Snowboards VALUES (11, "CAPiTA", "Navigator", 2, 500.96);
+INSERT INTO Snowboards VALUES (12, "Burton", "Cartographer", 11, 400.96);
+INSERT INTO Snowboards VALUES (13, "Burton", "Ripcord", 9, 335.96);
+INSERT INTO Snowboards VALUES (14, "Burton", "Process", 4, 439.96);
+INSERT INTO Snowboards VALUES (15, "Burton", "Good Company", 9, 351.96);
+
+
+--which model has the highest number in stock?
+SELECT * FROM Snowboards
+ORDER BY numberinstock desc; 
+
+--what is the average price of our boards?
+SELECT AVG(price) "avg price"
+FROM Snowboards;
+
+--what is our most affordable board?
+SELECT * FROM Snowboards
+ORDER BY price asc; 
+
+--which brand names do we carry?
+SELECT Brand FROM Snowboards
+ORDER BY Brand;
+
